@@ -12,6 +12,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
+import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries} from 'react-vis';
 
 const drawerWidth = 240;
 
@@ -88,6 +89,22 @@ export default function ClippedDrawer() {
           eleifend. Commodo viverra maecenas accumsan lacus vel facilisis. Nulla
           posuere sollicitudin aliquam ultrices sagittis orci a.
         </Typography>
+        <XYPlot
+            width={300}
+            height={300}>
+            <HorizontalGridLines/>
+            <LineSeries
+                data={[
+                    {x: 1, y: 10},
+                    {x: 2, y: 5},
+                    {x: 3, y: 7},
+                    {x: 4, y: 8},
+                    {x: 5, y: 4},
+                    {x: 6, y: 5},
+                ]}/>
+            <XAxis />
+            <YAxis />
+        </XYPlot>
       </Box>
     </Box>
   );
