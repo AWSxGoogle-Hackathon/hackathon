@@ -10,5 +10,5 @@ def add_to_db():
 def delete_in_db(render_id, api_key):
     pass
 
-def get_dashboard(api_key):
-    pass
+if __name__ == "__main__":
+    print("COOL")
